@@ -1,4 +1,3 @@
-import 'package:dart_base_arithmetic/src/structs/euclidien_division.dart';
 import 'package:test/test.dart';
 import 'package:dart_base_arithmetic/src/extensions/integer_euclidien_division_extension.dart';
 
