@@ -21,7 +21,7 @@ commands:
   lint:
     description: Lint the dart code
     steps:
-      - run: dartanalyzer --options analysis_options.yaml 
+      - run: dartanalyzer --options analysis_options.yaml .
 
 
 jobs:
