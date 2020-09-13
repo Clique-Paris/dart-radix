@@ -1,6 +1,6 @@
 name: radix
-description: Dart library for base arithmetic
-version: 1.0.0
+description: Dart library for base arithmetic. it handles basic base arithmetic operations like sum, subtraction, multiplication and division. Also decimal conversion, decimal parsing and string representation. 
+version: 1.0.1
 repository: https://github.com/Clique-Paris/dart-radix
 homepage: https://github.com/Clique-Paris/dart-radix
 documentation: https://github.com/Clique-Paris/dart-radix/blob/master/README.md
