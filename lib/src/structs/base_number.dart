@@ -81,10 +81,11 @@ class BaseNumber {
     var isNegatif = content.sign == -1;
     var _integerPart = content.abs().toInt();
     var _integerPartString = _integerPart.toString().split('');
+
     var result = 0;
     for (var i = _integerPartString.length - 1; i >= 0; i--) {
       result += int.parse(_integerPartString[i]) *
-          pow(base, _integerPartString.length - i);
+          pow(base, _integerPartString.length - 1 - i);
     }
     if (content.abs() - _integerPart != 0) {
       var _decimalPartString =
