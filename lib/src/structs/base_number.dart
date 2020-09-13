@@ -5,7 +5,7 @@ import 'package:dart_base_arithmetic/src/extensions/decimal_part_extension.dart'
 import 'package:dart_base_arithmetic/src/exceptions/base_not_supported_exception.dart';
 import 'package:dart_base_arithmetic/src/structs/euclidien_division.dart';
 
-class BasedNumber {
+class BaseNumber {
   final int base;
   int maxDecimal;
   num content;
@@ -13,7 +13,7 @@ class BasedNumber {
   /// Constucts a BaseNumber with given base, content and maxDecimal values
   ///
   /// If base is not valid i.e. not in less then 2 or greater than 10, throws [BAseNotSupportedException]
-  BasedNumber({this.base, this.content, this.maxDecimal = 12}) {
+  BaseNumber({this.base, this.content, this.maxDecimal = 12}) {
     if (base == null) {
       throw FormatException(
           'Base should be defined and should have a value between [2,10]');
@@ -26,11 +26,11 @@ class BasedNumber {
   /// Sums two based numbers on the same base.
   ///
   /// Throws [BaseMismatchException] if both bases are not equals
-  BasedNumber operator +(BasedNumber other) {
+  BaseNumber operator +(BaseNumber other) {
     if (base != other.base) {
       throw BaseMismatchException(left: this, right: other, operator: '+');
     }
-    var result = BasedNumber(base: base, maxDecimal: maxDecimal);
+    var result = BaseNumber(base: base, maxDecimal: maxDecimal);
     result.parse(decimal + other.decimal);
     return result;
   }
@@ -38,11 +38,11 @@ class BasedNumber {
   /// Substracts two based numbers on the same base.
   ///
   /// Throws [BaseMismatchException] if both bases are not equals
-  BasedNumber operator -(BasedNumber other) {
+  BaseNumber operator -(BaseNumber other) {
     if (base != other.base) {
       throw BaseMismatchException(left: this, right: other, operator: '-');
     }
-    var result = BasedNumber(base: base, maxDecimal: maxDecimal);
+    var result = BaseNumber(base: base, maxDecimal: maxDecimal);
     result.parse(decimal - other.decimal);
     return result;
   }
@@ -50,11 +50,11 @@ class BasedNumber {
   /// Multiplys two based numbers on the same base.
   ///
   /// Throws [BaseMismatchException] if both bases are not equals
-  BasedNumber operator *(BasedNumber other) {
+  BaseNumber operator *(BaseNumber other) {
     if (base != other.base) {
       throw BaseMismatchException(left: this, right: other, operator: '*');
     }
-    var result = BasedNumber(base: base, maxDecimal: maxDecimal);
+    var result = BaseNumber(base: base, maxDecimal: maxDecimal);
     result.parse(decimal * other.decimal);
     return result;
   }
@@ -62,11 +62,11 @@ class BasedNumber {
   /// Divides two based numbers on the same base.
   ///
   /// Throws [BaseMismatchException] if both bases are not equals
-  BasedNumber operator /(BasedNumber other) {
+  BaseNumber operator /(BaseNumber other) {
     if (base != other.base) {
       throw BaseMismatchException(left: this, right: other, operator: '/');
     }
-    var result = BasedNumber(base: base, maxDecimal: maxDecimal);
+    var result = BaseNumber(base: base, maxDecimal: maxDecimal);
     result.parse(decimal / other.decimal);
     return result;
   }
@@ -102,7 +102,7 @@ class BasedNumber {
   ///Checks if equals
   ///
   ///If two based numbers are equals their decimal values are equals too
-  bool equals(BasedNumber other) {
+  bool equals(BaseNumber other) {
     return decimal == other.decimal;
   }
 
@@ -134,7 +134,7 @@ class BasedNumber {
 
   @override
 
-  /// Returns the [String] representation of the [BasedNumber]
+  /// Returns the [String] representation of the [BaseNumber]
   ///
   /// Throws [BaseNotSupportedException] if the base is not supported
   String toString() {

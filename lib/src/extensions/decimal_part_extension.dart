@@ -1,5 +1,5 @@
 extension DecimalPart on num {
-  double get decimalPart {
+  num get decimalPart {
     return this - toInt();
   }
 }
