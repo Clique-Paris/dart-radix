@@ -82,16 +82,15 @@ class BaseNumber {
     var _integerPart = content.abs().toInt();
     var _integerPartString = _integerPart.toString().split('');
 
-    var result = 0;
+    var result = 0.0;
     for (var i = _integerPartString.length - 1; i >= 0; i--) {
       result += int.parse(_integerPartString[i]) *
           pow(base, _integerPartString.length - 1 - i);
     }
     if (content.abs() - _integerPart != 0) {
-      var _decimalPartString =
-          (content.abs() - _integerPart).toString().split('.')[1];
+      var _decimalPartString = content.abs().toString().split('.')[1];
       for (var i = 0; i < _decimalPartString.length; i++) {
-        result += int.parse(_decimalPartString[i]) * pow(base, -1 * i + 1);
+        result += (int.parse(_decimalPartString[i]) * pow(base, -1 * (i + 1)));
       }
     }
     if (isNegatif) {
