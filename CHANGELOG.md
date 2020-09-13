@@ -1,4 +1,4 @@
-## [version] - 2020-09-13
+## [1.0.1] - 2020-09-13
 
 ### Changed
 - Package description updated in `pubspec.yaml` file
