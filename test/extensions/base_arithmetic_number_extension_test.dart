@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:dart_base_arithmetic/src/extensions/base_arithmetic_number_extension.dart';
+import 'package:radix/src/extensions/radix_number_extension.dart';
 
 void main() {
   group('Number toBase function test', () {

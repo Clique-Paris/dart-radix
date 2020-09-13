@@ -1,4 +1,4 @@
-import 'package:base_arithmetic/src/structs/euclidien_division.dart';
+import 'package:radix/src/structs/euclidien_division.dart';
 
 extension IntegerEuclidienDivisionExtension on int {
   EuclidienDivision euclidienDivision(int other) {

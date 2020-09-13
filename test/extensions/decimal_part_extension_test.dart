@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:test/test.dart';
-import 'package:dart_base_arithmetic/src/extensions/decimal_part_extension.dart';
+import 'package:radix/src/extensions/decimal_part_extension.dart';
 
 void main() {
   group('Testing decimal part num extension', () {

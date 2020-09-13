@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:dart_base_arithmetic/src/extensions/integer_euclidien_division_extension.dart';
+import 'package:radix/src/extensions/integer_euclidien_division_extension.dart';
 
 void main() {
   group('Testing the integer euclidien division extension', () {

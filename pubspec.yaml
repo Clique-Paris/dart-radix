@@ -1,4 +1,4 @@
-name: base_arithmetic
+name: radix
 description: Dart library for base arithmetic
 version: 1.0.0
 repository: https://github.com/Clique-Paris/dart-base-arithmetic
@@ -8,8 +8,6 @@ documentation: https://github.com/Clique-Paris/dart-base-arithmetic/blob/master/
 environment:
   sdk: '>=2.8.1 <3.0.0'
 
-#dependencies:
-#  path: ^1.7.0
 
 dev_dependencies:
   pedantic: ^1.9.0

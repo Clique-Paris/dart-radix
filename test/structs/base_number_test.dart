@@ -1,15 +1,15 @@
-import 'package:dart_base_arithmetic/dart_base_arithmetic.dart';
+import 'package:radix/radix.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('Base number tests', () {
-    BaseNumber bn1;
-    BaseNumber bn2;
-    BaseNumber bn3;
+    Radix bn1;
+    Radix bn2;
+    Radix bn3;
     setUpAll(() {
-      bn1 = BaseNumber(base: 4);
-      bn2 = BaseNumber(base: 4);
-      bn3 = BaseNumber(base: 5);
+      bn1 = Radix(base: 4);
+      bn2 = Radix(base: 4);
+      bn3 = Radix(base: 5);
     });
 
     test('Parse 36', () {

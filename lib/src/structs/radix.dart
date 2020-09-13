@@ -1,11 +1,11 @@
 import 'dart:math';
-import 'package:base_arithmetic/src/exceptions/base_mismatch_exception.dart';
-import 'package:base_arithmetic/src/extensions/integer_euclidien_division_extension.dart';
-import 'package:base_arithmetic/src/extensions/decimal_part_extension.dart';
-import 'package:base_arithmetic/src/exceptions/base_not_supported_exception.dart';
-import 'package:base_arithmetic/src/structs/euclidien_division.dart';
+import 'package:radix/src/exceptions/base_mismatch_exception.dart';
+import 'package:radix/src/extensions/integer_euclidien_division_extension.dart';
+import 'package:radix/src/extensions/decimal_part_extension.dart';
+import 'package:radix/src/exceptions/base_not_supported_exception.dart';
+import 'package:radix/src/structs/euclidien_division.dart';
 
-class BaseNumber {
+class Radix {
   final int base;
   int maxDecimal;
   num content;
@@ -13,7 +13,7 @@ class BaseNumber {
   /// Constucts a BaseNumber with given base, content and maxDecimal values
   ///
   /// If base is not valid i.e. not in less then 2 or greater than 10, throws [BAseNotSupportedException]
-  BaseNumber({this.base, this.content, this.maxDecimal = 12}) {
+  Radix({this.base, this.content, this.maxDecimal = 12}) {
     if (base == null) {
       throw FormatException(
           'Base should be defined and should have a value between [2,10]');
@@ -26,11 +26,11 @@ class BaseNumber {
   /// Sums two based numbers on the same base.
   ///
   /// Throws [BaseMismatchException] if both bases are not equals
-  BaseNumber operator +(BaseNumber other) {
+  Radix operator +(Radix other) {
     if (base != other.base) {
       throw BaseMismatchException(left: this, right: other, operator: '+');
     }
-    var result = BaseNumber(base: base, maxDecimal: maxDecimal);
+    var result = Radix(base: base, maxDecimal: maxDecimal);
     result.parse(decimal + other.decimal);
     return result;
   }
@@ -38,11 +38,11 @@ class BaseNumber {
   /// Substracts two based numbers on the same base.
   ///
   /// Throws [BaseMismatchException] if both bases are not equals
-  BaseNumber operator -(BaseNumber other) {
+  Radix operator -(Radix other) {
     if (base != other.base) {
       throw BaseMismatchException(left: this, right: other, operator: '-');
     }
-    var result = BaseNumber(base: base, maxDecimal: maxDecimal);
+    var result = Radix(base: base, maxDecimal: maxDecimal);
     result.parse(decimal - other.decimal);
     return result;
   }
@@ -50,11 +50,11 @@ class BaseNumber {
   /// Multiplys two based numbers on the same base.
   ///
   /// Throws [BaseMismatchException] if both bases are not equals
-  BaseNumber operator *(BaseNumber other) {
+  Radix operator *(Radix other) {
     if (base != other.base) {
       throw BaseMismatchException(left: this, right: other, operator: '*');
     }
-    var result = BaseNumber(base: base, maxDecimal: maxDecimal);
+    var result = Radix(base: base, maxDecimal: maxDecimal);
     result.parse(decimal * other.decimal);
     return result;
   }
@@ -62,11 +62,11 @@ class BaseNumber {
   /// Divides two based numbers on the same base.
   ///
   /// Throws [BaseMismatchException] if both bases are not equals
-  BaseNumber operator /(BaseNumber other) {
+  Radix operator /(Radix other) {
     if (base != other.base) {
       throw BaseMismatchException(left: this, right: other, operator: '/');
     }
-    var result = BaseNumber(base: base, maxDecimal: maxDecimal);
+    var result = Radix(base: base, maxDecimal: maxDecimal);
     result.parse(decimal / other.decimal);
     return result;
   }
@@ -102,7 +102,7 @@ class BaseNumber {
   ///Checks if equals
   ///
   ///If two based numbers are equals their decimal values are equals too
-  bool equals(BaseNumber other) {
+  bool equals(Radix other) {
     return decimal == other.decimal;
   }
 
@@ -134,7 +134,7 @@ class BaseNumber {
 
   @override
 
-  /// Returns the [String] representation of the [BaseNumber]
+  /// Returns the [String] representation of the [Radix]
   ///
   /// Throws [BaseNotSupportedException] if the base is not supported
   String toString() {
