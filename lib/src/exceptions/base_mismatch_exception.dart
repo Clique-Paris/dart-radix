@@ -1,4 +1,4 @@
-import 'package:dart_base_arithmetic/src/structs/base_number.dart';
+import 'package:base_arithmetic/src/structs/base_number.dart';
 
 class BaseMismatchException implements Exception {
   String _message;

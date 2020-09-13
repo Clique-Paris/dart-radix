@@ -1,9 +1,9 @@
 import 'dart:math';
-import 'package:dart_base_arithmetic/src/exceptions/base_mismatch_exception.dart';
-import 'package:dart_base_arithmetic/src/extensions/integer_euclidien_division_extension.dart';
-import 'package:dart_base_arithmetic/src/extensions/decimal_part_extension.dart';
-import 'package:dart_base_arithmetic/src/exceptions/base_not_supported_exception.dart';
-import 'package:dart_base_arithmetic/src/structs/euclidien_division.dart';
+import 'package:base_arithmetic/src/exceptions/base_mismatch_exception.dart';
+import 'package:base_arithmetic/src/extensions/integer_euclidien_division_extension.dart';
+import 'package:base_arithmetic/src/extensions/decimal_part_extension.dart';
+import 'package:base_arithmetic/src/exceptions/base_not_supported_exception.dart';
+import 'package:base_arithmetic/src/structs/euclidien_division.dart';
 
 class BaseNumber {
   final int base;
