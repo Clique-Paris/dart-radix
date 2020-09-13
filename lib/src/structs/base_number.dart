@@ -115,7 +115,7 @@ class BaseNumber {
     EuclidienDivision _divisionResult;
     do {
       _divisionResult = _integerPart.euclidienDivision(base);
-      _resultString += _divisionResult.r.toString();
+      _resultString = _divisionResult.r.toString() + _resultString;
       _integerPart = _divisionResult.q;
     } while (_integerPart != 0);
     if (number.decimalPart != 0) {
